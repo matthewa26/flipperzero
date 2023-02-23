@@ -1,0 +1,34 @@
+REM macOS Update Script
+REM By Matthew Ayers
+REM matthewayers@acm.org
+
+ID 05ac:021e Apple:Keyboard
+
+REM Open Terminal
+DELAY 200                                                                       
+GUI SPACE                                                                       
+DELAY 300                                                                       
+STRING terminal.app                                                             
+DELAY 300                                                                       
+ENTER                                                                           
+DELAY 1000
+
+REM Run `brew update`
+STRING brew update
+ENTER
+DELAY 30000
+
+REM Run `brew upgrade`
+STRING brew upgrade
+ENTER
+DELAY 300
+
+REM Open new terminal window/tab
+GUI t
+DELAY 3000
+
+REM Run `mas update *`
+STRING mas upgrade
+ENTER
+DELAY 120000
+

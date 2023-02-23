@@ -1,0 +1,23 @@
+REM Rickroll for macOS
+REM Matthew Ayers (matthewayers@acm.org)
+REM 
+REM Description: Opens a rickroll in YouTube in full screen with no sound.
+REM Adaptataion Source: https://github.com/matthewa26/flipperzero/
+ID 05ac:021e Apple:Keyboard
+DELAY 200
+GUI SPACE
+DELAY 300
+STRING terminal.app
+DELAY 300
+ENTER
+DELAY 1000
+STRING osascript -e 'set volume 0' && open 'https://vimeo.com/138344302?autoplay=true' && killall Terminal
+ENTER
+DELAY 300
+GUI SPACE
+DELAY 300
+STRING safari.app
+DELAY 300
+ENTER
+DELAY 3000
+STRING f
